@@ -18,15 +18,15 @@
                      (FileUtils/listFiles (io/file dir) nil (= nested "nested")))
           (open-file [desktop file]
                      (.open desktop file))]
-    (let [files (get-files directory is-nested)]
-        (let [sfiles  (shuffle files)
-              desktop (java.awt.Desktop/getDesktop) ]
+    (let [files (get-files directory is-nested)
+          sfiles  (shuffle files)
+          desktop (java.awt.Desktop/getDesktop)]
           (doseq [f sfiles]
             (print (.getAbsolutePath f))
             (flush)
             (open-file desktop f)
             (read-line))
-          (println "No more files to open.")))))
+          (println "No more files to open."))))
 
 (defn -main [& args]
   (if-not (verify-args? args)

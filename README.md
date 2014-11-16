@@ -1,6 +1,6 @@
 # randomfileopener
 
-A Clojure library designed to ... well, that part is up to you.
+Opens a random file in a given directory.
 
 ## Usage
 

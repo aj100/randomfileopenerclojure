@@ -1,14 +1,11 @@
 # randomfileopener
 
-Opens a random file in a given directory.
+Opens a random file in a given directory. (Only tested in Windows.)
 
 ## Usage
 
-FIXME
+You can do: lein run "C:\YourPath" [nested]
 
-## License
+Or: java -jar randomfileopener.jar "C:\YourPath" [nested]
 
-Copyright © 2014 FIXME
-
-Distributed under the Eclipse Public License either version 1.0 or (at
-your option) any later version.
+And then just keep hitting 'Enter' to keep opening up more files.
